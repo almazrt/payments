@@ -7,12 +7,12 @@ use App\Modules\Confirmation\Data\ConfirmationMethod;
 final class UpdatingUserSettingDto
 {
     public function __construct(
-        public int                $userId,
-        public UserSetting        $userSetting,
-        public string             $newValue,
-        public int                $confirmationId,
-        public ConfirmationMethod $confirmationMethod,
-        public string             $code,
+        public readonly int                $userId,
+        public readonly UserSetting        $userSetting,
+        public readonly string             $newValue,
+        public readonly int                $confirmationId,
+        public readonly ConfirmationMethod $confirmationMethod,
+        public readonly string             $code,
     )
     {
     }
