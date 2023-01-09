@@ -19,8 +19,8 @@ class ConfirmationServiceFactory
     {
         return $this->container->make(match ($confirmationMethod) {
             ConfirmationMethod::Email => EmailConfirmationService::class,
-            ConfirmationMethod::Sms => new SmsConfirmationService::class,
-            ConfirmationMethod::Telegram => new TelegramConfirmationService::class,
+            ConfirmationMethod::Sms => SmsConfirmationService::class,
+            ConfirmationMethod::Telegram => TelegramConfirmationService::class,
         });
     }
 }
