@@ -19,7 +19,7 @@ class UserSettingsService
     /**
      * @throws InvalidCodeException
      */
-    public function setUserSetting(UpdatingUserSettingDto $updatingUserSettingDto): void
+    public function updateUserSetting(UpdatingUserSettingDto $updatingUserSettingDto): void
     {
         $confirmationService = $this->confirmationServiceFactory->build($updatingUserSettingDto->confirmationMethod);
         if (!$confirmationService->checkCode($updatingUserSettingDto->confirmationId, $updatingUserSettingDto->code)) {

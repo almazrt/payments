@@ -21,7 +21,7 @@ class UserSettingsController extends Controller
      */
     public function update(UserSettingUpdateRequest $request)
     {
-        $this->userSettingsService->setUserSetting(new UpdatingUserSettingDto(
+        $this->userSettingsService->updateUserSetting(new UpdatingUserSettingDto(
             $this->getUser()->id,
             UserSetting::fromString($request->input('user_setting')),
             $request->input('new_value'),
